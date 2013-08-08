@@ -1,6 +1,7 @@
 class RailsProject.Routers.Projects extends Backbone.Router
   routes: 
     '': 'index'
+    'projects/:id': 'show'
 
   initialize: ->
     @projects = new RailsProject.Collections.Projects()
@@ -8,12 +9,12 @@ class RailsProject.Routers.Projects extends Backbone.Router
 
 
   index: ->
-    console.log(@projects.length)
     view = new RailsProject.Views.ProjectsIndex(collection: @projects)
-
-
-
-    alert "WANT SOME WAIT"
-
     $('#content').html(view.render().el)
-    alert "Ok"
+
+  show: (id) ->
+    @project = @projects.get(id)
+    view = new RailsProject.Views.ProjectsShow(model: @project)
+    console.log(@projects)
+    console.log(@project)
+    $('#content').html(view.render().el)
