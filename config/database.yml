@@ -15,7 +15,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: FILL_ME_IN_development
+  database: WDI_FirstBackbone_development
   pool: 5
   username: <%= ENV['DB_USER'] %>
   password:
@@ -42,7 +42,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: FILL_ME_IN_test
+  database: WDI_FirstBackbone_test
   pool: 5
   username: <%= ENV['DB_USER'] %>
   password:
@@ -51,7 +51,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: FILL_ME_IN_production
+  database: WDI_FirstBackbone_production
   pool: 5
   username: <%= ENV['DB_USER'] %>
   password:

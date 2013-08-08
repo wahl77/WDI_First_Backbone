@@ -1,0 +1,7 @@
+<h1>Some projects</h1>
+
+<ul>
+<% for project in @projects.models: %> 
+  <li>Project <%= project.get('name') %></li>
+<% end %>
+</ul>
